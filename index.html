@@ -1,10 +1,206 @@
 <!doctype html>
-<html>
-<body style="background:red;color:white;font-size:40px">
-INDEX CHECK
-<img src="./kids-collage.jpg" style="width:300px">
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>warmoria | 採用LP</title>
+  <meta name="description" content="warmoria 採用LP。STEAM教育 zunŌw を軸に、子どもたちの学びをもっと自由に、もっと楽しく。" />
+
+  <style>
+    :root{
+      --bg0:#fff7ed; --bg1:#fff1e6;
+      --ink:#2b1b12; --muted:#6b4b3a;
+      --line:rgba(242,210,191,.9);
+      --card:rgba(255,255,255,.84);
+      --o1:#f97316; --o2:#fb923c;
+      --shadow:0 18px 60px rgba(43,27,18,.14);
+      --r:20px; --max:1120px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;color:var(--ink);
+      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,"Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",sans-serif;
+      background:
+        radial-gradient(1200px 700px at 16% -10%, rgba(249,115,22,.28), transparent 62%),
+        radial-gradient(1000px 700px at 92% 14%, rgba(251,146,60,.22), transparent 60%),
+        linear-gradient(180deg,var(--bg0),var(--bg1));
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:22px 18px 86px}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0 18px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.2px}
+    .dot{width:12px;height:12px;border-radius:999px;background:linear-gradient(90deg,var(--o1),var(--o2));box-shadow:0 0 0 6px rgba(249,115,22,.12)}
+    .pill{font-size:12px;color:var(--muted);background:rgba(255,255,255,.65);border:1px solid var(--line);padding:8px 12px;border-radius:999px;backdrop-filter:blur(10px);white-space:nowrap}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden;backdrop-filter:blur(10px)}
+
+    .hero{position:relative;border-radius:calc(var(--r) + 6px);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}
+    .heroMedia{position:absolute;inset:0}
+    .heroMedia img{width:100%;height:100%;object-fit:cover;filter:saturate(1.05) contrast(1.02);transform:scale(1.02)}
+    .heroMedia::after{
+      content:"";position:absolute;inset:0;
+      background:
+        linear-gradient(90deg, rgba(43,27,18,.86) 0%, rgba(43,27,18,.70) 36%, rgba(43,27,18,.20) 72%, rgba(43,27,18,0) 100%),
+        linear-gradient(180deg, rgba(249,115,22,.20), rgba(255,255,255,0));
+    }
+    .heroInner{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:14px;padding:28px}
+    @media (max-width:920px){.heroInner{grid-template-columns:1fr;padding:18px}}
+
+    .heroMain{padding:26px 24px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);border-radius:18px;backdrop-filter:blur(14px)}
+    .kicker{display:inline-flex;align-items:center;gap:10px;padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.10);color:rgba(255,255,255,.92);font-size:12px;font-weight:900;letter-spacing:.2px}
+    h1{margin:14px 0 10px;font-size:44px;line-height:1.14;letter-spacing:-.6px;color:#fff;text-shadow:0 18px 34px rgba(0,0,0,.22)}
+    @media (max-width:560px){h1{font-size:32px}}
+    .lead{margin:0;color:rgba(255,255,255,.86);font-size:15.5px;line-height:1.9;max-width:66ch;text-shadow:0 12px 26px rgba(0,0,0,.18)}
+    .ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:14px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.12);color:#fff;font-weight:900;font-size:14px;transition:.15s ease}
+    .btn:hover{transform:translateY(-1px)}
+    .btnPrimary{border:0;background:linear-gradient(90deg,var(--o1),var(--o2));color:#1f130c;box-shadow:0 16px 44px rgba(249,115,22,.35)}
+    .btnGhost{background:rgba(255,255,255,.16)}
+
+    .heroSide{padding:18px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);border-radius:18px;backdrop-filter:blur(14px);color:#fff}
+    .sideTitle{margin:0 0 10px;font-size:13px;font-weight:900;letter-spacing:.2px;color:rgba(255,255,255,.86)}
+    .mini{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.10);border-radius:14px;padding:14px;margin-top:10px}
+    .mini b{display:block;margin-bottom:6px}
+    .mini p{margin:0;color:rgba(255,255,255,.82);font-size:13px;line-height:1.8}
+    .logoRow{display:flex;align-items:center;gap:12px;margin-top:14px}
+    .logoBox{width:56px;height:56px;border-radius:16px;background:rgba(255,255,255,.70);border:1px solid rgba(255,255,255,.22);padding:8px}
+    .logoBox img{width:100%;height:100%;object-fit:contain;display:block}
+
+    .section{margin-top:14px;padding:22px}
+    .section h2{margin:0 0 10px;font-size:18px;letter-spacing:-.2px}
+    .sub{margin:0;color:var(--muted);font-size:13.5px;line-height:1.85}
+
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+    @media (max-width:920px){.grid{grid-template-columns:1fr}}
+    .item{border:1px solid var(--line);background:rgba(255,255,255,.72);border-radius:16px;padding:16px 14px;min-height:104px}
+    .item b{display:block;margin-bottom:6px}
+    .item p{margin:0;color:var(--muted);font-size:13px;line-height:1.75}
+    .link{font-weight:900;text-decoration:underline;text-underline-offset:3px}
+
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+    @media (max-width:920px){.gallery{grid-template-columns:1fr}}
+    .ph{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;position:relative}
+    .ph img{width:100%;height:240px;object-fit:cover;display:block}
+    .tag{position:absolute;left:10px;top:10px;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:900;color:#1f130c;background:rgba(255,255,255,.84);border:1px solid var(--line);backdrop-filter:blur(10px)}
+
+    .ctaBlock{
+      margin-top:14px;padding:26px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+      background:radial-gradient(900px 380px at 15% 0%, rgba(255,255,255,.35), transparent 60%),
+        linear-gradient(90deg, rgba(249,115,22,.90), rgba(251,146,60,.78));
+      border:1px solid rgba(255,255,255,.30);color:#1f130c;border-radius:calc(var(--r) + 6px);box-shadow:var(--shadow);
+    }
+    .ctaBlock h2{margin:0;font-size:18px}
+    .ctaBlock p{margin:0;color:rgba(31,19,12,.78);font-size:13.5px;line-height:1.8}
+
+    .footer{margin-top:16px;padding:14px 2px 0;color:rgba(43,27,18,.55);font-size:12px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand"><span class="dot"></span>warmoria</div>
+      <div class="pill">採用 / zunŌw / 導入相談</div>
+    </div>
+
+    <section class="hero">
+      <div class="heroMedia">
+        <img src="./assets/kids-collage.jpg" alt="学びの様子" />
+      </div>
+
+      <div class="heroInner">
+        <div class="heroMain">
+          <div class="kicker">新たな教育のカタチを作る仲間募集</div>
+          <h1>学びはもっと自由で<br>もっと楽しくていい</h1>
+          <p class="lead">
+            warmoria は STEAM教育スクール zunŌw を軸に、子どもたちの探究を支える場をつくる。
+            目の前の一人をちゃんと見る。場を整える。チームで改善を積み上げる。
+          </p>
+
+          <div class="ctaRow">
+            <a class="btn btnPrimary" href="https://en-gage.net/warmoria/" target="_blank" rel="noopener">採用の募集一覧</a>
+            <a class="btn btnGhost" href="https://fn-zunow.com/" target="_blank" rel="noopener">zunŌwへ</a>
+            <a class="btn btnGhost" href="https://fn-zunow.com/workshop" target="_blank" rel="noopener">zunŌw導入相談</a>
+          </div>
+        </div>
+
+        <aside class="heroSide">
+          <p class="sideTitle">warmoria が大切にすること</p>
+
+          <div class="mini"><b>子どもをちゃんと見る</b><p>小さな変化に気づき、声かけと設計で伸びる瞬間を増やす</p></div>
+          <div class="mini"><b>場づくりも仕事</b><p>準備も掃除も含めて、学びの空気と安全をつくる</p></div>
+          <div class="mini"><b>チームで良い学びを作る</b><p>授業も運営も改善し続け、再現できる形に落とし込む</p></div>
+
+          <div class="logoRow">
+            <div class="logoBox"><img src="./assets/logo.png" alt="warmoria logo" /></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="card section">
+      <h2>導線は3つに絞る</h2>
+      <p class="sub">採用 / zunŌw公式 / 導入相談。LPの役割をブレさせない。</p>
+
+      <div class="grid">
+        <div class="item"><b>採用を見たい方</b><p><a class="link" href="https://en-gage.net/warmoria/" target="_blank" rel="noopener">募集一覧へ</a></p></div>
+        <div class="item"><b>zunŌw を知りたい方</b><p><a class="link" href="https://fn-zunow.com/" target="_blank" rel="noopener">公式サイトへ</a></p></div>
+        <div class="item"><b>zunŌw を導入したい方</b><p><a class="link" href="https://fn-zunow.com/workshop" target="_blank" rel="noopener">出張ワークショップへ</a></p></div>
+      </div>
+    </section>
+
+    <section class="card section">
+      <h2>現場の熱量を見せる</h2>
+      <p class="sub">写真が出るだけで一気にそれっぽくなる。</p>
+
+      <div class="gallery">
+        <div class="ph"><span class="tag">教室</span><img src="./assets/class-1.jpg" alt="教室の様子" /></div>
+        <div class="ph"><span class="tag">プログラミング</span><img src="./assets/class-2.jpg" alt="プログラミングの様子" /></div>
+        <div class="ph"><span class="tag">教材</span><img src="./assets/puzzle.jpg" alt="教材" /></div>
+      </div>
+
+      <div class="gallery">
+        <div class="ph"><span class="tag">イベント</span><img src="./assets/staff-1.jpg" alt="イベントの様子" /></div>
+        <div class="ph"><span class="tag">発表と協働</span><img src="./assets/staff-2.jpg" alt="発表の様子" /></div>
+        <div class="ph"><span class="tag">探究</span><img src="./assets/kids-collage.jpg" alt="探究の様子" /></div>
+      </div>
+    </section>
+
+    <section class="card section">
+      <h2>事例</h2>
+      <p class="sub">3枚だけで十分。</p>
+
+      <div class="gallery">
+        <div class="ph"><span class="tag">事例1</span><img src="./assets/case-1.jpg" alt="事例1" /></div>
+        <div class="ph"><span class="tag">事例2</span><img src="./assets/case-2.jpg" alt="事例2" /></div>
+        <div class="ph"><span class="tag">事例3</span><img src="./assets/case-3.jpg" alt="事例3" /></div>
+      </div>
+    </section>
+
+    <section class="ctaBlock">
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <div class="logoBox" style="width:64px;height:64px"><img src="./assets/logo.png" alt="warmoria logo" /></div>
+        <div>
+          <h2>採用の募集一覧</h2>
+          <p>現場で子どもと向き合いながら、教育の仕組みも一緒に作りたい方へ</p>
+        </div>
+      </div>
+
+      <div class="ctaRow" style="margin:0">
+        <a class="btn" href="https://en-gage.net/warmoria/" target="_blank" rel="noopener" style="background:rgba(255,255,255,.92);border:0;color:#1f130c">募集一覧へ</a>
+        <a class="btn" href="https://fn-zunow.com/workshop" target="_blank" rel="noopener" style="background:rgba(255,255,255,.78);border:0;color:#1f130c">導入相談</a>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div>© warmoria</div>
+      <div>
+        <a class="link" href="https://fn-zunow.com/" target="_blank" rel="noopener">zunŌw</a>
+        &nbsp;|&nbsp;
+        <a class="link" href="https://fn-zunow.com/workshop" target="_blank" rel="noopener">workshop</a>
+        &nbsp;|&nbsp;
+        <a class="link" href="https://en-gage.net/warmoria/" target="_blank" rel="noopener">recruit</a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
-
-<!-- rebuild -->
-
