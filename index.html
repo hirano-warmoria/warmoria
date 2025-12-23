@@ -1,445 +1,249 @@
 <!doctype html>
-<html lang='ja'>
+<html lang="ja">
 <head>
-  <meta charset='utf-8'>
-  <meta name='viewport' content='width=device-width,initial-scale=1'>
-  <title>warmoria</title>
-  <meta name='description' content='STEAM教育教室 zunŌw と学習支援を行う warmoria のサイト'>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>warmoria</title>
+<meta name="description" content="STEAM教育教室 zunŌw を運営する warmoria">
 
-  <style>
-    :root{
-      --bg:#140b08;
-      --panel:rgba(255,255,255,.06);
-      --panel2:rgba(255,255,255,.10);
-      --text:rgba(255,255,255,.92);
-      --muted:rgba(255,255,255,.72);
-      --line:rgba(255,255,255,.14);
-      --accent:#ff7a18;
-      --accent2:#ffb703;
-      --shadow:0 22px 70px rgba(0,0,0,.52);
-      --radius:18px;
-      --max:1160px;
-    }
+<style>
+:root{
+  --bg:#1b0e05;
+  --text:rgba(255,255,255,.94);
+  --muted:rgba(255,255,255,.72);
+  --line:rgba(255,255,255,.18);
+  --accent:#ff7a00;
+  --accent2:#ffb703;
+  --shadow:0 22px 70px rgba(0,0,0,.55);
+  --radius:18px;
+  --max:1160px;
+}
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:system-ui,-apple-system,'Segoe UI','Hiragino Kaku Gothic ProN','Meiryo',sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(1200px 600px at 10% -10%, rgba(255,122,24,.38), transparent 60%),
-        radial-gradient(900px 520px at 92% 8%, rgba(255,183,3,.28), transparent 58%),
-        radial-gradient(980px 520px at 40% 112%, rgba(255,122,24,.18), transparent 62%),
-        var(--bg);
-      overflow-x:hidden;
-    }
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Meiryo",sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(255,122,0,.45), transparent 60%),
+    radial-gradient(900px 520px at 90% 10%, rgba(255,183,3,.35), transparent 58%),
+    var(--bg);
+}
 
-    header{
-      position:sticky;
-      top:0;
-      z-index:20;
-      backdrop-filter:blur(12px);
-      background:linear-gradient(to bottom, rgba(20,11,8,.82), rgba(20,11,8,.45));
-      border-bottom:1px solid var(--line);
-    }
-    .nav{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:14px;
-      padding:14px 0;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      font-weight:800;
-      letter-spacing:.3px;
-    }
-    .logo{
-      width:28px;height:28px;border-radius:10px;
-      background:rgba(255,255,255,.06);
-      border:1px solid var(--line);
-      display:grid;place-items:center;
-      overflow:hidden;
-    }
-    .logo img{width:100%;height:100%;object-fit:contain;display:block}
-    nav{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-      font-size:14px;
-      color:var(--muted);
-    }
-    nav a{padding:8px 10px;border-radius:12px}
-    nav a:hover{background:rgba(255,255,255,.06);color:var(--text)}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:11px 14px;border-radius:12px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.06);
-      color:var(--text);
-      font-weight:700;
-      transition:transform .12s ease, background .12s ease, border-color .12s ease;
-      white-space:nowrap;
-    }
-    .btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.22)}
-    .btn.primary{
-      background:linear-gradient(135deg,var(--accent),var(--accent2));
-      border:0;
-      color:#180c08;
-    }
+a{text-decoration:none;color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
 
-    .hero{padding:56px 0 26px}
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1.05fr .95fr;
-      gap:16px;
-      align-items:stretch;
-    }
-    .card{
-      border:1px solid var(--line);
-      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-    }
-    .hero-main{padding:26px 24px}
-    .kicker{
-      display:inline-flex;gap:10px;align-items:center;
-      font-size:13px;color:var(--muted);
-      padding:8px 12px;border:1px solid var(--line);
-      border-radius:999px;background:rgba(255,255,255,.05);
-    }
-    .dot{
-      width:8px;height:8px;border-radius:99px;
-      background:linear-gradient(135deg,var(--accent),var(--accent2));
-      box-shadow:0 0 0 6px rgba(255,122,24,.14);
-    }
-    h1{
-      margin:16px 0 10px;
-      font-size:42px;
-      line-height:1.12;
-      letter-spacing:-.2px;
-    }
-    .lead{margin:0 0 18px;color:var(--muted);font-size:16px;line-height:1.75}
-    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+header{
+  position:sticky;top:0;z-index:10;
+  backdrop-filter:blur(10px);
+  background:rgba(27,14,5,.75);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:14px 0;
+}
+.brand{font-weight:800;letter-spacing:.4px}
+nav a{margin-left:14px;font-size:14px;color:var(--muted)}
+nav a:hover{color:#fff}
 
-    .hero-media{padding:16px;display:grid;gap:12px}
-    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    .thumb{
-      border-radius:16px;
-      border:1px solid var(--line);
-      overflow:hidden;
-      background:rgba(255,255,255,.04);
-      position:relative;
-      min-height:180px;
-    }
-    .thumb img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-      filter:saturate(1.06) contrast(1.04);
-    }
-    .cap{
-      position:absolute;
-      left:10px;bottom:10px;
-      padding:7px 10px;
-      border-radius:999px;
-      background:rgba(0,0,0,.38);
-      border:1px solid rgba(255,255,255,.18);
-      color:rgba(255,255,255,.86);
-      font-size:12px;
-      backdrop-filter:blur(6px);
-    }
+.hero{padding:56px 0 32px}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:20px;
+}
+.card{
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:rgba(255,255,255,.06);
+  box-shadow:var(--shadow);
+}
+.hero-main{padding:28px}
+h1{font-size:42px;line-height:1.15;margin:0 0 12px}
+.lead{color:var(--muted);font-size:16px;line-height:1.7}
 
-    section{padding:34px 0}
-    .section-title{
-      display:flex;align-items:flex-end;justify-content:space-between;gap:12px;
-      margin-bottom:14px;
-    }
-    .section-title h2{margin:0;font-size:22px;letter-spacing:-.2px}
-    .section-title p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+.btn{
+  display:inline-block;
+  padding:12px 18px;
+  border-radius:12px;
+  font-weight:700;
+  margin-top:14px;
+}
+.btn.primary{
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#1b0e05;
+}
 
-    .tiles{
-      display:grid;
-      grid-template-columns:repeat(12,1fr);
-      gap:12px;
-    }
-    .tile{
-      padding:16px;
-      border-radius:16px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.05);
-      transition:transform .12s ease, background .12s ease, border-color .12s ease;
-    }
-    .tile:hover{transform:translateY(-2px);background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22)}
-    .col-4{grid-column:span 4}
-    .col-6{grid-column:span 6}
-    .col-12{grid-column:span 12}
-    .tile h3{margin:2px 0 6px;font-size:16px}
-    .tile p{margin:0;color:var(--muted);font-size:14px;line-height:1.75}
-    .pill{
-      display:inline-flex;align-items:center;gap:8px;
-      font-size:12px;
-      padding:7px 10px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-      color:rgba(255,255,255,.82);
-      margin-bottom:8px;
-    }
+.hero-photos{
+  padding:16px;
+  display:grid;
+  gap:12px;
+}
+.thumb{
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid var(--line);
+}
+.thumb img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  filter:saturate(1.15) contrast(1.05);
+}
 
-    .masonry{
-      display:grid;
-      grid-template-columns:repeat(12,1fr);
-      gap:12px;
-    }
-    .m-6{grid-column:span 6}
-    .m-4{grid-column:span 4}
-    .m-8{grid-column:span 8}
-    .m-12{grid-column:span 12}
+section{padding:40px 0}
+h2{font-size:22px;margin:0 0 14px}
 
-    .faq{padding:18px}
-    details{
-      border:1px solid var(--line);
-      border-radius:14px;
-      background:rgba(255,255,255,.04);
-      padding:12px 14px;
-    }
-    details summary{
-      cursor:pointer;
-      font-weight:800;
-      list-style:none;
-    }
-    details summary::-webkit-details-marker{display:none}
-    details p{margin:10px 0 0;color:var(--muted);line-height:1.75;font-size:14px}
+.grid3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+.box{
+  padding:18px;
+  border-radius:16px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.05);
+}
+.box h3{margin:0 0 6px;font-size:16px}
+.box p{margin:0;color:var(--muted);line-height:1.7}
 
-    footer{
-      padding:26px 0 40px;
-      border-top:1px solid var(--line);
-      color:var(--muted);
-      font-size:14px;
-    }
-    .foot{
-      display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;
-    }
-    .foot a{color:var(--text)}
-    .foot a:hover{text-decoration:underline}
+.gallery{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:14px;
+}
+.gallery2{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
 
-    @media (max-width: 980px){
-      h1{font-size:34px}
-      .hero-grid{grid-template-columns:1fr}
-      .thumb{min-height:200px}
-      .col-4{grid-column:span 6}
-      .m-4{grid-column:span 6}
-      .m-6{grid-column:span 6}
-      .m-8{grid-column:span 12}
-    }
-    @media (max-width: 560px){
-      h1{font-size:30px}
-      .col-4,.col-6,.col-12{grid-column:span 12}
-      .m-4,.m-6,.m-8,.m-12{grid-column:span 12}
-      nav{gap:6px}
-    }
-  </style>
+footer{
+  border-top:1px solid var(--line);
+  padding:30px 0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+@media(max-width:900px){
+  .hero-grid,.gallery{grid-template-columns:1fr}
+  .grid3,.gallery2{grid-template-columns:1fr}
+  h1{font-size:34px}
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class='wrap nav'>
-    <div class='brand'>
-      <div class='logo'>
-        <img src='logo.png' alt='logo'>
-      </div>
-      <div>warmoria</div>
-    </div>
-
+  <div class="wrap nav">
+    <div class="brand">warmoria</div>
     <nav>
-      <a href='#about'>概要</a>
-      <a href='#program'>プログラム</a>
-      <a href='#gallery'>写真</a>
-      <a href='#contact'>問い合わせ</a>
-      <a class='btn' href='home.html'>別ページ</a>
+      <a href="#about">概要</a>
+      <a href="#program">プログラム</a>
+      <a href="#workshop">ワークショップ</a>
+      <a href="#contact">問い合わせ</a>
     </nav>
   </div>
 </header>
 
 <main>
 
-  <section class='hero'>
-    <div class='wrap hero-grid'>
-
-      <div class='card hero-main'>
-        <div class='kicker'>
-          <span class='dot'></span>
-          <span>STEAM教育教室 zunŌw と学習支援</span>
-        </div>
-
-        <h1>アソビとマナビで<br>考える力が育つ場所</h1>
-
-        <p class='lead'>
-          理科実験 算数脳 プログラミングを横断し<br>
-          つくる 試す 伝えるまでを大切にします
-        </p>
-
-        <div class='cta'>
-          <a class='btn primary' href='#contact'>体験の相談をする</a>
-          <a class='btn' href='#program'>プログラムを見る</a>
-          <a class='btn' href='#gallery'>写真を見る</a>
-        </div>
-      </div>
-
-      <aside class='card hero-media'>
-        <div class='thumb' style='min-height:210px'>
-          <img src='kids-collage.jpg' alt='kids'>
-          <div class='cap'>授業の空気</div>
-        </div>
-
-        <div class='grid2'>
-          <div class='thumb'>
-            <img src='hirano.jpg' alt='hirano'>
-            <div class='cap'>代表</div>
-          </div>
-          <div class='thumb'>
-            <img src='puzzle.jpg' alt='puzzle'>
-            <div class='cap'>算数脳</div>
-          </div>
-        </div>
-      </aside>
-
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="card hero-main">
+      <h1>
+        アソビとマナビで<br>
+        考える力を育てる
+      </h1>
+      <p class="lead">
+        理科 算数 プログラミングを横断する<br>
+        体験型STEAM教育
+      </p>
+      <a class="btn primary" href="#contact">体験を相談する</a>
     </div>
-  </section>
 
-  <section id='about'>
-    <div class='wrap'>
-      <div class='section-title'>
-        <h2>概要</h2>
-        <p>学校でも塾でもない 第三の学びの場</p>
+    <div class="card hero-photos">
+      <div class="thumb">
+        <img src="kids-collage.jpg">
       </div>
-
-      <div class='tiles'>
-        <div class='tile col-6'>
-          <div class='pill'>コンセプト</div>
-          <h3>考える つくる 伝える</h3>
-          <p>体験から問いをつくり 試行錯誤して 自分の言葉で説明できる状態を目指します</p>
-        </div>
-
-        <div class='tile col-6'>
-          <div class='pill'>対象</div>
-          <h3>年中 から 小学生</h3>
-          <p>好奇心と集中が続く設計で 小さな成功体験を積み上げます</p>
-        </div>
+      <div class="thumb">
+        <img src="hirano.jpg">
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id='program'>
-    <div class='wrap'>
-      <div class='section-title'>
-        <h2>プログラム</h2>
-        <p>短文で統一すると一気に締まる</p>
+<section id="about">
+  <div class="wrap">
+    <h2>概要</h2>
+    <p class="lead">
+      学校でも塾でもない<br>
+      第三の学びの場
+    </p>
+  </div>
+</section>
+
+<section id="program">
+  <div class="wrap">
+    <h2>プログラム</h2>
+    <div class="grid3">
+      <div class="box">
+        <h3>理科実験</h3>
+        <p>現象から考える</p>
       </div>
-
-      <div class='tiles'>
-        <div class='tile col-4'>
-          <div class='pill'>理科実験</div>
-          <h3>現象を見て なぜ を考える</h3>
-          <p>見える変化から仮説を立てて検証します</p>
-        </div>
-
-        <div class='tile col-4'>
-          <div class='pill'>算数脳</div>
-          <h3>解き方より 考え方</h3>
-          <p>図形やパズルで思考の型をつくります</p>
-        </div>
-
-        <div class='tile col-4'>
-          <div class='pill'>プログラミング</div>
-          <h3>動かして理解する論理</h3>
-          <p>条件と手順を自分で組み立てます</p>
-        </div>
+      <div class="box">
+        <h3>算数脳</h3>
+        <p>考え方を育てる</p>
       </div>
-    </div>
-  </section>
-
-  <section id='gallery'>
-    <div class='wrap'>
-      <div class='section-title'>
-        <h2>写真</h2>
-        <p>写真を大きく出すほど それっぽく見える</p>
-      </div>
-
-      <div class='masonry'>
-        <div class='thumb m-8' style='min-height:260px'>
-          <img src='class-1.jpg' alt='class1'>
-          <div class='cap'>授業風景</div>
-        </div>
-        <div class='thumb m-4' style='min-height:260px'>
-          <img src='class-2.jpg' alt='class2'>
-          <div class='cap'>授業風景</div>
-        </div>
-
-        <div class='thumb m-4' style='min-height:220px'>
-          <img src='case-1.jpg' alt='case1'>
-          <div class='cap'>制作</div>
-        </div>
-        <div class='thumb m-4' style='min-height:220px'>
-          <img src='case-2.jpg' alt='case2'>
-          <div class='cap'>実験</div>
-        </div>
-        <div class='thumb m-4' style='min-height:220px'>
-          <img src='case-3.jpg' alt='case3'>
-          <div class='cap'>発表</div>
-        </div>
+      <div class="box">
+        <h3>プログラミング</h3>
+        <p>論理を組み立てる</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id='team'>
-    <div class='wrap'>
-      <div class='section-title'>
-        <h2>スタッフ</h2>
-        <p>顔が見えると 信頼が上がる</p>
+<section id="workshop">
+  <div class="wrap">
+    <h2>ワークショップ例</h2>
+
+    <div class="gallery">
+      <div class="thumb">
+        <img src="class-1.jpg">
       </div>
-
-      <div class='masonry'>
-        <div class='thumb m-4' style='min-height:240px'>
-          <img src='staff-1.jpg' alt='staff1'>
-          <div class='cap'>スタッフ</div>
-        </div>
-        <div class='thumb m-4' style='min-height:240px'>
-          <img src='staff-2.jpg' alt='staff2'>
-          <div class='cap'>スタッフ</div>
-        </div>
-        <div class='tile m-4'>
-          <div class='pill'>ひとこと</div>
-          <h3>考えている時間が一番かっこいい</h3>
-          <p>静かな集中も 失敗も 話し合いも すべて学びになる</p>
-        </div>
+      <div class="thumb">
+        <img src="class-2.jpg">
       </div>
     </div>
-  </section>
 
-  <section id='faq'>
-    <div class='wrap'>
-      <div class='section-title'>
-        <h2>よくある質問</h2>
-        <p>ここがあると離脱が減る</p>
-      </div>
+    <div class="gallery2" style="margin-top:14px">
+      <div class="thumb"><img src="case-1.jpg"></div>
+      <div class="thumb"><img src="case-2.jpg"></div>
+      <div class="thumb"><img src="case-3.jpg"></div>
+    </div>
+  </div>
+</section>
 
-      <div class='card faq'>
-        <div class='masonry'>
-          <details class='m-6' open>
-            <summary>体験はできますか</summary>
-            <p>できます 下の問い合わせから 希望日時と年齢を送ってください</p>
-          </details>
-          <details class='m-6'>
-            <summary>初めてでも大丈夫ですか</summary>
-            <p>大丈夫です 道具の使い方から一緒に進めます</p>
-          </details>
+<section id="contact">
+  <div class="wrap">
+    <h2>問い合わせ</h2>
+    <p class="lead">体験 出張 連携の相談</p>
+    <a class="btn primary" href="https://example.com" target="_blank">問い合わせフォーム</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    © warmoria
+  </div>
+</footer>
+
+</body>
+</html>
