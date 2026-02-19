@@ -172,3 +172,31 @@ a:hover{ text-decoration: underline; }
 .footer-name{ font-weight: 800; }
 .footer-meta{ color: var(--muted); font-size: 14px; }
 .footer-copy{ color: var(--muted); font-size: 13px; }
+
+.gallery{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+@media (min-width: 820px){
+  .gallery{ grid-template-columns: repeat(3, 1fr); }
+}
+.gallery figure{
+  margin:0;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow: 0 6px 18px rgba(17,24,39,.06);
+}
+.gallery img{
+  width:100%;
+  height: 180px;
+  object-fit: cover;
+  display:block;
+}
+.gallery figcaption{
+  padding: 10px 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
