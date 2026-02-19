@@ -1,335 +1,90 @@
-<meta name="google-site-verification" content="7NqjbAcJbkoSffwvek-wZHHgoSOZMUonZdZxQ6w2sBI" />
-
 <!doctype html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>warmoria｜zunŌw STEAMワークショップ</title>
-<meta name="description" content="zunŌwは、体験を通して考える力を育てるSTEAMワークショップを全国で展開しています。">
-
-<style>
-:root{
-  --bg:#fff6ec;
-  --panel:#ffffff;
-  --text:#2b1a10;
-  --muted:#6b4a3a;
-  --line:#f0d9c6;
-  --accent:#ff7a00;
-  --accent2:#ffb703;
-  --radius:18px;
-  --shadow:0 18px 40px rgba(0,0,0,.08);
-  --max:1160px;
-}
-
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  font-family:system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Meiryo",sans-serif;
-  color:var(--text);
-  background:
-    radial-gradient(1200px 600px at 10% -10%, rgba(255,183,3,.25), transparent 60%),
-    radial-gradient(900px 520px at 90% 10%, rgba(255,122,0,.20), transparent 58%),
-    var(--bg);
-}
-
-a{text-decoration:none;color:inherit}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
-
-/* header */
-header{
-  position:sticky;
-  top:0;
-  z-index:10;
-  background:rgba(255,246,236,.9);
-  backdrop-filter:blur(8px);
-  border-bottom:1px solid var(--line);
-}
-.nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:14px 0;
-}
-.brand{
-  font-weight:800;
-  letter-spacing:.4px;
-  color:var(--accent);
-}
-nav a{
-  margin-left:16px;
-  font-size:14px;
-  color:var(--muted);
-}
-nav a:hover{color:var(--accent)}
-
-/* hero */
-.hero{padding:64px 0 40px}
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:24px;
-}
-.card{
-  background:var(--panel);
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-}
-.hero-main{padding:32px}
-h1{
-  font-size:42px;
-  line-height:1.2;
-  margin:0 0 14px;
-}
-.lead{
-  font-size:16px;
-  line-height:1.8;
-  color:var(--muted);
-}
-
-.btn{
-  display:inline-block;
-  padding:13px 22px;
-  border-radius:999px;
-  font-weight:700;
-  margin-top:18px;
-}
-.btn.primary{
-  background:linear-gradient(135deg,var(--accent),var(--accent2));
-  color:#fff;
-}
-
-/* images */
-.hero-photos{
-  padding:16px;
-  display:grid;
-  gap:14px;
-}
-.thumb{
-  border-radius:14px;
-  overflow:hidden;
-}
-.thumb img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
-
-/* section */
-section{padding:56px 0}
-h2{
-  font-size:24px;
-  margin:0 0 18px;
-  color:var(--accent);
-}
-
-.grid3{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-.box{
-  padding:22px;
-  border-radius:var(--radius);
-  background:#fff;
-  box-shadow:var(--shadow);
-}
-.box h3{
-  margin:0 0 8px;
-  font-size:17px;
-}
-.box p{
-  margin:0 0 12px;
-  color:var(--muted);
-  line-height:1.7;
-}
-
-/* workshop */
-.gallery{
-  display:grid;
-  grid-template-columns:2fr 1fr;
-  gap:18px;
-}
-.gallery2{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-  margin-top:18px;
-}
-
-/* footer */
-footer{
-  background:#fff;
-  border-top:1px solid var(--line);
-  padding:36px 0;
-  color:var(--muted);
-  font-size:14px;
-  text-align:center;
-}
-
-@media(max-width:900px){
-  .hero-grid,.grid3,.gallery,.gallery2{
-    grid-template-columns:1fr;
-  }
-  h1{font-size:32px}
-}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ワークショップ案内｜株式会社warmoria</title>
+  <meta name="description" content="株式会社warmoriaが企画・運営するSTEAM教育ワークショップのご案内。詳細・お申し込みはこちら。" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
-
 <body>
 
-<header>
-  <div class="wrap nav">
-    <div class="brand">zunŌw workshop</div>
-    <nav>
-      <a href="#philosophy">理念</a>
-      <a href="#about">事業内容</a>
-      <a href="#program">特徴</a>
-      <a href="#workshop">実施例</a>
-      <a href="#contact">問い合わせ</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="./index.html" aria-label="株式会社warmoria">
+      <img src="./logo.png" alt="warmoria ロゴ">
+      <span>株式会社warmoria</span>
+    </a>
+
+    <nav class="nav" aria-label="グローバルナビゲーション">
+      <a href="./index.html">ワークショップ</a>
+      <a href="./company.html">会社情報</a>
+      <a href="https://fn-zunow.com/workshop/" target="_blank" rel="noopener noreferrer">お問い合わせ</a>
+      <a href="https://en-gage.net/warmoria/" target="_blank" rel="noopener noreferrer">採用</a>
     </nav>
   </div>
 </header>
 
 <main>
-
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div class="card hero-main">
-      <h1>
-        体験から<br>
-        考える力を育てる
-      </h1>
+  <section class="hero">
+    <div class="container">
+      <h1>STEAM教育ワークショップのご案内</h1>
       <p class="lead">
-        zunŌwは、理科・算数・プログラミングを横断した<br>
-        体験型STEAMワークショップを企画・実施しています
-      </p>
-      <a class="btn primary" href="https://fn-zunow.com/" target="_blank">zunŌw公式サイトへ</a>
-    </div>
-
-    <div class="card hero-photos">
-      <div class="thumb"><img src="_Q6A1858.jpg"></div>
-      <div class="thumb"><img src="_Q6A1655.jpg"></div>
-    </div>
-  </div>
-</section>
-
-<section id="philosophy">
-  <div class="wrap">
-    <h2>理念</h2>
-
-    <p class="lead">
-      体験は、考える力の入口だと考えています。
-    </p>
-
-    <div class="box">
-      <p>
-        zunŌwのワークショップは、<br>
-        知識を教える場ではありません。
+        株式会社warmoriaが企画・運営する、STEAM教育ワークショップ。
+        開催内容・日程・お申し込みは外部ページでご案内しています。
       </p>
 
-      <p>
-        手を動かし、現象に触れ、<br>
-        なぜだろう、どうしたらいいだろうと考える。<br>
-        その思考の過程そのものを大切にしています。
-      </p>
-
-      <p>
-        正解を早く出すことよりも、<br>
-        試し、失敗し、考え直す経験を重ねること。
-      </p>
-
-      <p>
-        理科・算数・プログラミングを横断するSTEAMの学びは、<br>
-        変化の大きい社会を生きるための<br>
-        考え続ける力を育てると信じています。
-      </p>
-
-      <p>
-        zunŌwは、<br>
-        子どもたちが自分の頭で考え、<br>
-        自分の言葉で説明できるようになるまで、<br>
-        体験の設計にこだわり続けます。
-      </p>
-    </div>
-  </div>
-</section>
-
-<section id="about">
-  <div class="wrap">
-    <h2>事業内容</h2>
-    <p class="lead">
-      教室運営で培ったノウハウを活かし、<br>
-      全国各地でSTEAMワークショップを実施しています
-    </p>
-  </div>
-</section>
-
-<section id="program">
-  <div class="wrap">
-    <h2>ワークショップの特徴</h2>
-    <div class="grid3">
-      <div class="box">
-        <h3>体験重視</h3>
-        <p>手を動かし 現象から学ぶ</p>
+      <div class="cta">
+        <a class="btn primary" href="https://fn-zunow.com/workshop/" target="_blank" rel="noopener noreferrer">
+          詳細・お申し込み（外部）
+        </a>
+        <a class="btn" href="./company.html">株式会社warmoriaについて</a>
       </div>
-      <div class="box">
-        <h3>横断型</h3>
-        <p>理科 算数 プログラミングを組み合わせる</p>
+
+      <p class="note">※外部サイト（fn-zunow.com）へ移動します。</p>
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="grid">
+      <div class="card">
+        <h2 style="margin:0 0 8px;">運営</h2>
+        <p style="margin:0; color:var(--muted);">
+          本ワークショップは <strong>株式会社warmoria</strong> が企画・運営しています。
+          会社概要は <a href="./company.html">会社情報</a> をご覧ください。
+        </p>
       </div>
-      <div class="box">
-        <h3>アウトプット</h3>
-        <p>考えたことを言葉で伝える</p>
+
+      <div class="card">
+        <h2 style="margin:0 0 8px;">採用</h2>
+        <p style="margin:0; color:var(--muted);">
+          採用情報はEngageに掲載しています。<br>
+          <a href="https://en-gage.net/warmoria/" target="_blank" rel="noopener noreferrer">採用ページへ</a>
+        </p>
       </div>
     </div>
-  </div>
-</section>
-
-<section id="workshop">
-  <div class="wrap">
-    <h2>ワークショップ実施例</h2>
-
-    <div class="gallery">
-      <div class="thumb"><img src="class-1.jpg"></div>
-      <div class="thumb"><img src="class-2.jpg"></div>
-    </div>
-
-    <div class="gallery2">
-      <div class="thumb"><img src="case-3.jpg"></div>
-      <div class="thumb"><img src="case-1.jpg"></div>
-      <div class="thumb"><img src="_Q6A2690.jpg"></div>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="wrap">
-    <h2>問い合わせ</h2>
-    <p class="lead">
-      出張授業 イベント 自治体連携など<br>
-      zunŌw公式サイトよりお問い合わせください
-    </p>
-    <a class="btn primary" href="https://fn-zunow.com/" target="_blank">zunŌwへ問い合わせる</a>
-  </div>
-</section>
-
-<section id="note">
-  <div class="wrap">
-    <h2>note</h2>
-    <p class="lead">
-      ワークショップ設計や教育の考え方を発信しています
-    </p>
-    <a class="btn primary" href="https://note.com/fine_eel984" target="_blank">noteを読む</a>
-  </div>
-</section>
-
+  </section>
 </main>
 
-<footer>
-  © warmoria / zunŌw
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <div class="footer-name">株式会社warmoria</div>
+      <div class="footer-meta">
+        千葉県流山市おおたかの森東4丁目1-6<br>
+        代表取締役社長　平野智史
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <a href="./privacy.html">プライバシーポリシー</a>
+      <a href="https://fn-zunow.com/workshop/" target="_blank" rel="noopener noreferrer">お問い合わせ（外部）</a>
+    </div>
+
+    <div class="footer-copy">© warmoria</div>
+  </div>
 </footer>
 
 </body>
 </html>
+
