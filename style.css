@@ -200,3 +200,19 @@ a:hover{ text-decoration: underline; }
   color: var(--muted);
   font-size: 13px;
 }
+
+.mvv{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+@media (min-width: 820px){
+  .mvv{ grid-template-columns: 1fr 1fr; }
+}
+.values{
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+.values li{ margin: 6px 0; }
+.kicker{ color: var(--muted); font-weight: 700; font-size: 13px; letter-spacing: .04em; }
+
