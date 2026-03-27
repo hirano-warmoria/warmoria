@@ -1,113 +1,371 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>親子スペース｜株式会社warmoria</title>
-  <meta name="description" content="warmoriaの無料親子スペース。週2回、親子でゆったり過ごせるあたたかい場所です。" />
-  <link rel="stylesheet" href="./style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>午前中開校 | 株式会社warmoria</title>
+    <meta name="description" content="warmoriaの午前中開校。4月27日体験会開催！" />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #ff8c42 0%, #ffa060 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+
+        .hero-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .hero-section p {
+            font-size: 16px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .btn-primary {
+            background-color: #ff6b35;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background-color: #ff5522;
+        }
+
+        .btn-secondary {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .event-highlight {
+            background-color: #fff5e6;
+            border-left: 5px solid #ff8c42;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+
+        .event-highlight p {
+            margin: 10px 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .feature {
+            background-color: #fff5e6;
+            padding: 20px;
+            border-radius: 10px;
+            border-top: 4px solid #ff8c42;
+            text-align: center;
+        }
+
+        .feature .label {
+            color: #ff8c42;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+
+        .feature h3 {
+            color: #333;
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .feature p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .event-flyer {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .event-flyer img {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(255, 140, 66, 0.2);
+        }
+
+        .event-details {
+            background-color: #fff5e6;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+
+        .event-details h3 {
+            color: #ff8c42;
+            font-size: 22px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #ff8c42;
+            padding-bottom: 10px;
+        }
+
+        .event-details ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        .event-details li {
+            margin: 10px 0;
+            color: #333;
+            font-size: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table th {
+            background-color: #ff8c42;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        table td {
+            border-bottom: 1px solid #e0e0e0;
+            padding: 15px;
+            color: #333;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .contact-section {
+            background-color: #ff8c42;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .contact-section p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .contact-section strong {
+            font-weight: bold;
+        }
+
+        article {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #ff8c42;
+            padding-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="./home.html" aria-label="株式会社warmoria">
+                <img src="./logo.png" alt="warmoria ロゴ" />
+            </a>
+            <span>株式会社warmoria</span>
+        </div>
+    </header>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="./home.html" aria-label="株式会社warmoria">
-      <img src="./logo.png" alt="warmoria ロゴ">
-      <span>株式会社warmoria</span>
-    </a>
     <nav class="nav" aria-label="グローバルナビゲーション">
-      <a href="./index.html">ワークショップ</a>
-      <a href="./morning.html">親子スペース</a>
-      <a href="./rhythmic.html">リトミック</a>
-      <a href="./company.html">会社情報</a>
-      <a href="https://line.me/R/ti/p/@499pomgv" target="_blank" rel="noopener noreferrer">LINE</a>
+        <a href="./index.html">ワークショップ</a>
+        <a href="./rhythmic.html">リトミック</a>
+        <a href="./company.html">会社情報</a>
+        <a href="https://line.me/R/ti/p/@499pomgv" target="_blank" rel="noopener noreferrer">公式LINE</a>
     </nav>
-  </div>
-</header>
 
-<main>
-  <section class="hero">
-    <div class="container">
-      <p class="kicker">FREE SPACE</p>
-      <h1>親子で集まれる、<br>あたたかい場所。</h1>
-      <p class="lead">
-        warmoriaの無料親子スペース。<br>
-        絵本・おもちゃを囲んで、ママ・パパと子どもがゆったり過ごせる時間をご用意しています。
-      </p>
-      <div class="cta">
-        <a class="btn primary" href="https://line.me/R/ti/p/@499pomgv" target="_blank" rel="noopener noreferrer">
-          LINEで最新情報を受け取る
-        </a>
-      </div>
-    </div>
-  </section>
+    <main>
+        <article>
+            <h1 style="text-align: center; font-size: 42px; color: #ff8c42; margin-bottom: 10px;">FREE SPACE</h1>
 
-  <section class="container section">
-    <h2>スペース概要</h2>
-    <div class="card">
-      <table class="table">
-        <tr>
-          <th>開催日</th>
-          <td>週2回（日程はLINEにてご案内）</td>
-        </tr>
-        <tr>
-          <th>対象</th>
-          <td>乳幼児とその保護者</td>
-        </tr>
-        <tr>
-          <th>料金</th>
-          <td>無料</td>
-        </tr>
-        <tr>
-          <th>場所</th>
-          <td>千葉県流山市おおたかの森東4丁目1-6</td>
-        </tr>
-        <tr>
-          <th>設備</th>
-          <td>カーペット敷き・絵本・おもちゃ</td>
-        </tr>
-      </table>
-    </div>
-  </section>
+            <section class="hero-section">
+                <h2>4月27日 午前中開校 体験会！</h2>
+                <p>親子で集まれる、あたたかい場所。<br />warmoriaの午前中開校スペース。絵本・おもちゃを囲んで、ママ・パパと子どもがゆったり過ごせる時間をご用意しています。</p>
+                <div class="button-group">
+                    <a class="btn-primary" href="https://line.me/R/ti/p/@499pomgv">体験会に申し込む（LINE）</a>
+                    <a class="btn-secondary" href="#overview">詳細を見る</a>
+                </div>
+            </section>
 
-  <section class="container section">
-    <h2>こんな方におすすめ</h2>
-    <div class="mvv">
-      <div class="card">
-        <p class="kicker">FOR PARENTS</p>
-        <p>同じ年齢の子を持つ親御さんと交流したい方、育児の息抜きをしたい方にぴったりです。</p>
-      </div>
-      <div class="card">
-        <p class="kicker">FOR KIDS</p>
-        <p>のびのびと遊べる空間で、子どもたちが自由に探索・遊べる環境を整えています。</p>
-      </div>
-    </div>
-  </section>
+            <div class="event-highlight">
+                <p>📅 4月27日 午前中開校 体験会開催！</p>
+            </div>
 
-  <section class="container section" style="text-align:center; padding: 40px 0;">
-    <h2>最新情報はLINEで配信中</h2>
-    <p style="color:var(--muted); margin-bottom: 20px;">開催日程・イベント情報をいち早くお届けします。</p>
-    <a class="btn primary" href="https://line.me/R/ti/p/@499pomgv" target="_blank" rel="noopener noreferrer">
-      LINEを友だち追加する
-    </a>
-  </section>
-</main>
+            <section id="overview">
+                <h2>スペース概要</h2>
 
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div>
-      <div class="footer-name">株式会社warmoria</div>
-      <div class="footer-meta">
-        千葉県流山市おおたかの森東4丁目1-6<br>
-        代表取締役社長　平野智史
-      </div>
-    </div>
-    <div class="footer-links">
-      <a href="./privacy.html">プライバシーポリシー</a>
-    </div>
-    <div class="footer-copy">© warmoria</div>
-  </div>
-</footer>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>開催日</th>
+                            <td>2026年4月27日（月）</td>
+                        </tr>
+                        <tr>
+                            <th>時間</th>
+                            <td>10:00～12:00</td>
+                        </tr>
+                        <tr>
+                            <th>対象</th>
+                            <td>0歳～3歳と保護者</td>
+                        </tr>
+                        <tr>
+                            <th>料金</th>
+                            <td>無料</td>
+                        </tr>
+                        <tr>
+                            <th>場所</th>
+                            <td>千葉県流山市おおたかの森東4丁目1-6</td>
+                        </tr>
+                        <tr>
+                            <th>設備</th>
+                            <td>カーペット敷き・絵本・おもちゃ・ベビーカー置き場・授乳室完備</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
+            <section>
+                <h2>こんな方におすすめ</h2>
+
+                <div class="features">
+                    <div class="feature">
+                        <p class="label">FOR PARENTS</p>
+                        <h3>保護者の方へ</h3>
+                        <p>同じ年齢の子を持つ親御さんと交流したい方、育児の息抜きをしたい方にぴったりです。</p>
+                    </div>
+
+                    <div class="feature">
+                        <p class="label">FOR KIDS</p>
+                        <h3>お子さんへ</h3>
+                        <p>のびのびと遊べる空間で、子どもたちが自由に探索・遊べる環境を整えています。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>4月27日 体験会開催！</h2>
+
+                <div class="event-flyer">
+                    <img src="./4月オープン記念.jpg" alt="4月27日体験会フライヤー" />
+                </div>
+
+                <div class="event-details">
+                    <h3>体験内容</h3>
+
+                    <p><strong style="color: #ff8c42; font-size: 18px;">開催日：2026年4月27日（月）</strong></p>
+                    <p><strong style="color: #ff8c42; font-size: 18px;">時間：10:00～12:00</strong></p>
+
+                    <h3 style="color: #ff8c42; margin-top: 30px;">このスペースで楽しめること</h3>
+                    <ul>
+                        <li>📚 絵本を一緒に読もう</li>
+                        <li>🧸 おもちゃで自由に遊ぼう</li>
+                        <li>👨‍👩‍👧 親同士の交流タイム</li>
+                        <li>💬 子育ての相談・情報交換</li>
+                    </ul>
+
+                    <h3 style="color: #ff8c42; margin-top: 30px;">詳細情報</h3>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>対象年齢</th>
+                                <td>0歳～3歳</td>
+                            </tr>
+                            <tr>
+                                <th>参加費</th>
+                                <td>無料</td>
+                            </tr>
+                            <tr>
+                                <th>場所</th>
+                                <td>千葉県流山市おおたかの森東4丁目1-6<br />（流山おおたかの森駅徒歩5分）</td>
+                            </tr>
+                            <tr>
+                                <th>設備</th>
+                                <td>ベビーカー置き場、授乳室完備</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="text-align: center; margin: 40px 0;">
+                    <a class="btn-primary" href="https://line.me/R/ti/p/@499pomgv">LINEで体験会に申し込む</a>
+                </div>
+
+                <div class="contact-section">
+                    <p><strong>運営会社：</strong> 株式会社warmoria</p>
+                    <p><strong>TEL：</strong> 04-7137-9180</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>最新情報はLINEで配信中</h2>
+                <p style="text-align: center; font-size: 16px; color: #666; margin: 20px 0;">開催日程・イベント情報をいち早くお届けします。</p>
+                <div style="text-align: center;">
+                    <a class="btn-primary" href="https://line.me/R/ti/p/@499pomgv">LINEを友だち追加する</a>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 warmoria. All rights reserved.</p>
+    </footer>
 </body>
 </html>
+
