@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>リトミック | 株式会社warmoria</title>
-    <meta name="description" content="warmoriaのリトミック教室。音楽で育む、子どもの豊かな感性。4,400円/月。" />
+    <meta name="description" content="warmoriaのリトミック教室。音楽で育む、子どもの豊かな感性。5月も継続開催決定！5月11日・18日・25日 無料体験会開催！" />
     <link rel="stylesheet" href="./style.css" />
     <style>
         .hero-section {
@@ -212,6 +212,128 @@
             border-bottom: 3px solid #ff8c42;
             padding-bottom: 10px;
         }
+
+        /* ===== 5月継続開催バナー ===== */
+        .may-banner {
+            background: linear-gradient(135deg, #fff0e6 0%, #ffe0cc 100%);
+            border: 3px solid #ff8c42;
+            border-radius: 16px;
+            padding: 30px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .may-banner::before {
+            content: "";
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 140, 66, 0.1);
+            border-radius: 50%;
+        }
+
+        .may-banner .badge {
+            display: inline-block;
+            background: #ff6b35;
+            color: white;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 5px 16px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .may-banner h2 {
+            border: none;
+            color: #d2691e;
+            font-size: 28px;
+            margin-bottom: 12px;
+            padding-bottom: 0;
+        }
+
+        .may-banner .subtitle {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 18px;
+        }
+
+        .may-dates {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .may-dates .date-chip {
+            background: white;
+            border: 2px solid #ff8c42;
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-weight: bold;
+            font-size: 16px;
+            color: #d2691e;
+        }
+
+        .may-banner .info-line {
+            font-size: 15px;
+            color: #555;
+            margin-top: 8px;
+        }
+
+        /* ===== 5月体験内容カード ===== */
+        .may-activities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        .may-activity-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ffe0cc;
+            box-shadow: 0 2px 8px rgba(255, 140, 66, 0.08);
+        }
+
+        .may-activity-card .icon {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .may-activity-card h4 {
+            color: #d2691e;
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+
+        .may-activity-card p {
+            color: #666;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .rhythmic-note {
+            background: #fff9f0;
+            border: 1px dashed #ff8c42;
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+            text-align: center;
+        }
+
+        .rhythmic-note strong {
+            color: #ff6b35;
+        }
     </style>
 </head>
 <body>
@@ -235,11 +357,29 @@
         <article>
             <h1 style="text-align: center; font-size: 42px; color: #ff8c42; margin-bottom: 10px;">RHYTHMIC</h1>
 
+            <!-- ========== 5月継続開催バナー ========== -->
+            <div class="may-banner">
+                <span class="badge">🎉 ご好評につき</span>
+                <h2>5月も継続開催決定！</h2>
+                <p class="subtitle">オープン記念 第2弾 ✨ 5月 無料体験会</p>
+                <div class="may-dates">
+                    <span class="date-chip">5/11（月）</span>
+                    <span class="date-chip">5/18（月）</span>
+                    <span class="date-chip">5/25（月）</span>
+                </div>
+                <p class="info-line">10:00〜12:00 ／ 参加費 無料 ／ 0〜3歳対象</p>
+                <div class="button-group">
+                    <a class="btn-primary" href="#may-event">5月の詳細を見る</a>
+                    <a class="btn-primary" href="https://forms.gle/HJj3P5fCh45pWDuT9">申込はこちら</a>
+                </div>
+            </div>
+            <!-- ========== /5月継続開催バナー ========== -->
+
             <section class="hero-section">
                 <h2>音楽で育む、<br />子どもの豊かな感性。</h2>
                 <p>warmoriaのリトミック教室。<br />音楽・リズム・動きを通じて、子どもの表現力・集中力・協調性を楽しく育てます。</p>
                 <div class="button-group">
-                    <a class="btn-primary" href="https://line.me/R/ti/p/@499pomgv">体験会に申し込む（LINE）</a>
+                    <a class="btn-primary" href="https://forms.gle/HJj3P5fCh45pWDuT9">申込はこちら</a>
                     <a class="btn-secondary" href="#overview">詳細を見る</a>
                 </div>
             </section>
@@ -356,7 +496,87 @@
                 </div>
 
                 <div style="text-align: center; margin: 40px 0;">
-                    <a class="btn-primary" href="https://line.me/R/ti/p/@499pomgv">LINEで体験会に申し込む</a>
+                    <a class="btn-primary" href="https://forms.gle/HJj3P5fCh45pWDuT9">申込はこちら</a>
+                </div>
+            </section>
+
+            <!-- ========== 5月体験会セクション ========== -->
+            <section id="may-event">
+                <h2>🌸 5月 無料体験会 ― オープン記念 第2弾</h2>
+
+                <div class="event-flyer">
+                    <img src="./5gatsu.png" alt="5月無料体験会フライヤー" />
+                </div>
+
+                <div class="event-details">
+                    <h3>5月の体験内容</h3>
+
+                    <p><strong style="color: #ff8c42; font-size: 18px;">開催日：2026年5月11日・18日・25日（毎週月曜）</strong></p>
+                    <p><strong style="color: #ff8c42; font-size: 18px;">時間：10:00～12:00</strong></p>
+
+                    <h3 style="color: #ff8c42; margin-top: 30px;">この日の体験内容</h3>
+
+                    <div class="may-activities">
+                        <div class="may-activity-card">
+                            <div class="icon">🎵</div>
+                            <h4>リトミック</h4>
+                            <p>音楽に合わせて身体を動かそう！</p>
+                        </div>
+                        <div class="may-activity-card">
+                            <div class="icon">🎨</div>
+                            <h4>手形アート</h4>
+                            <p>お子さまの成長の記念に♪</p>
+                        </div>
+                        <div class="may-activity-card">
+                            <div class="icon">📸</div>
+                            <h4>フォトブース</h4>
+                            <p>素敵な笑顔をパシャリ！</p>
+                        </div>
+                        <div class="may-activity-card">
+                            <div class="icon">🌼</div>
+                            <h4>自由あそび</h4>
+                            <p>知育玩具がたくさんあります</p>
+                        </div>
+                    </div>
+
+                    <div class="rhythmic-note">
+                        🎵 <strong>リトミック</strong>は 10:00〜10:40 ／ 11:00〜11:40 の2回開催<br />
+                        各回定員8名・予約優先
+                    </div>
+
+                    <h3 style="color: #ff8c42; margin-top: 30px;">詳細情報</h3>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>開催日</th>
+                                <td>2026年5月11日（月）・18日（月）・25日（月）</td>
+                            </tr>
+                            <tr>
+                                <th>時間</th>
+                                <td>10:00～12:00</td>
+                            </tr>
+                            <tr>
+                                <th>対象年齢</th>
+                                <td>0歳～3歳と保護者</td>
+                            </tr>
+                            <tr>
+                                <th>参加費</th>
+                                <td>無料</td>
+                            </tr>
+                            <tr>
+                                <th>場所</th>
+                                <td>千葉県流山市おおたかの森東4丁目1-6<br />（流山おおたかの森駅徒歩5分）</td>
+                            </tr>
+                            <tr>
+                                <th>設備</th>
+                                <td>ベビーカー置き場、授乳室完備</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="text-align: center; margin: 40px 0;">
+                    <a class="btn-primary" href="https://forms.gle/HJj3P5fCh45pWDuT9" style="font-size: 18px; padding: 16px 40px;">申込はこちら</a>
                 </div>
 
                 <div class="contact-section">
@@ -364,6 +584,7 @@
                     <p><strong>TEL：</strong> 04-7137-9180</p>
                 </div>
             </section>
+            <!-- ========== /5月体験会セクション ========== -->
         </article>
     </main>
 
@@ -372,3 +593,4 @@
     </footer>
 </body>
 </html>
+
