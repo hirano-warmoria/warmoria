@@ -1,133 +1,280 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>株式会社warmoria</title>
-  <meta name="description" content="株式会社warmoria。親子スペース・リトミック・STEAM教育ワークショップを運営しています。" />
-  <link rel="stylesheet" href="./style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>warmoria｜まなびを、楽しく。</title>
+<meta name="description" content="warmoriaは、0歳から大人まで、あたたかい物語が生まれる学びの場をつくる教育企業です。">
+<meta property="og:title" content="warmoria｜まなびを、楽しく。">
+<meta property="og:description" content="0歳から大人まで、あたたかい物語が生まれる学びの場を。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="./index.html" aria-label="株式会社warmoria">
-      <img src="./logo.png" alt="warmoria ロゴ">
-      <span>株式会社warmoria</span>
-    </a>
-
-    <nav class="nav" aria-label="グローバルナビゲーション">
-      <a href="./index.html">TOP</a>
-      <a href="./morning.html">親子スペース</a>
-      <a href="./rhythmic.html">リトミック</a>
-      <a href="./company.html">会社情報</a>
-      <a href="https://line.me/R/ti/p/@499pomgv" target="_blank" rel="noopener noreferrer">LINE</a>
+<!-- Header -->
+<header>
+  <div class="header-inner">
+    <a href="#top" class="logo">warmoria</a>
+    <nav class="nav-links">
+      <a href="#vision">Vision</a>
+      <a href="#values">Values</a>
+      <a href="#services">Services</a>
+      <a href="#links">Links</a>
+      <a href="company.html">Company</a>
     </nav>
   </div>
 </header>
 
-<main>
-  <section class="hero">
-    <div class="container">
-      <p class="kicker">warmoria</p>
-      <h1>親子で集まれる、<br>あたたかい場所。</h1>
-      <p class="lead">
-        株式会社warmoriaは、子どもと親が笑顔になれる場所づくりをしています。<br>
-        無料親子スペース・リトミック教室・STEAM教育ワークショップを運営中。
+<!-- Hero -->
+<section class="hero" id="top">
+  <div class="hero-image">
+    <img src="images/hero.jpg" alt="親子で過ごすあたたかい時間">
+  </div>
+  <div class="hero-inner">
+    <p class="hero-en">warmoria</p>
+    <h1>まなびを、<br>楽しく。</h1>
+    <p class="hero-sub">0歳から大人まで、<br>"あたたかい物語"が生まれる学びの場を。</p>
+    <div class="hero-cta">
+      <a href="https://fn-zunow.com/" class="btn btn-primary" target="_blank" rel="noopener">教育サービスを見る（zunŌw）</a>
+      <a href="#links" class="btn btn-ghost">すべての入口へ</a>
+    </div>
+  </div>
+</section>
+
+<!-- Vision / Mission -->
+<section class="vision" id="vision">
+  <div class="vision-bg">
+    <img src="images/vision-bg.jpg" alt="">
+  </div>
+  <div class="vision-inner">
+    <div class="vision-block">
+      <p class="label">Vision</p>
+      <h2>すべての子どもが、<br>人生の主人公として輝ける社会。</h2>
+    </div>
+    <div class="vision-block">
+      <p class="label">Mission</p>
+      <h2>教育を通じて、<br>子どもたちが自ら考え、選び、<br>挑戦する力を育てる。</h2>
+    </div>
+  </div>
+</section>
+
+<!-- Values -->
+<section class="values" id="values">
+  <div class="section-head">
+    <p class="label">Values</p>
+    <h2>warmoriaが<br class="sp-only">大切にしていること</h2>
+  </div>
+  <ul class="values-grid">
+    <li>
+      <div class="value-img"><img src="images/value-01.jpg" alt="" loading="lazy"></div>
+      <h3>子ども主体</h3>
+      <p>与えるより、引き出す。</p>
+    </li>
+    <li>
+      <div class="value-img"><img src="images/value-02.jpg" alt="" loading="lazy"></div>
+      <h3>トライ&エラー</h3>
+      <p>結果より、プロセス。</p>
+    </li>
+    <li>
+      <div class="value-img"><img src="images/value-03.jpg" alt="" loading="lazy"></div>
+      <h3>心理的安全性</h3>
+      <p>否定のない、挑戦の場。</p>
+    </li>
+    <li>
+      <div class="value-img"><img src="images/value-04.jpg" alt="" loading="lazy"></div>
+      <h3>他者とのつながり</h3>
+      <p>第三のコミュニティで出会う。</p>
+    </li>
+    <li>
+      <div class="value-img"><img src="images/value-05.jpg" alt="" loading="lazy"></div>
+      <h3>対話と表現</h3>
+      <p>考えを、形にする。</p>
+    </li>
+    <li>
+      <div class="value-img"><img src="images/value-06.jpg" alt="" loading="lazy"></div>
+      <h3>日常と探究の接続</h3>
+      <p>身近を、学びの入り口に。</p>
+    </li>
+  </ul>
+</section>
+
+<!-- Services / 年齢別 -->
+<section class="services" id="services">
+  <div class="section-head">
+    <p class="label">Services</p>
+    <h2>0歳から大人まで、<br class="sp-only">広がる学びの場</h2>
+  </div>
+  <ul class="services-grid">
+    <li>
+      <div class="service-img"><img src="images/age-baby.jpg" alt="0〜3歳向けサービス" loading="lazy"></div>
+      <p class="age">0〜3歳</p>
+      <h3>親子スペース／リトミック</h3>
+      <p class="desc">親子で過ごす、はじめての学びの時間。</p>
+    </li>
+    <li>
+      <div class="service-img"><img src="images/age-kids.jpg" alt="年少〜小学生向けサービス" loading="lazy"></div>
+      <p class="age">年少〜小学生</p>
+      <h3>STEAM教育 zunŌw</h3>
+      <p class="desc">"なぜ？"が"できた！"に変わる、探究の時間。</p>
+    </li>
+    <li>
+      <div class="service-img"><img src="images/age-teen.jpg" alt="中高生向けサービス" loading="lazy"></div>
+      <p class="age">中高生</p>
+      <h3>個別指導塾 正学館／キャリア教育</h3>
+      <p class="desc">自分で選び、自分で進む力を育てる。</p>
+    </li>
+    <li>
+      <div class="service-img"><img src="images/age-biz.jpg" alt="法人・教育機関向け" loading="lazy"></div>
+      <p class="age">法人・教育機関</p>
+      <h3>出張授業／教育コンサルティング</h3>
+      <p class="desc">学校・園・自治体向けSTEAM授業。</p>
+    </li>
+  </ul>
+</section>
+
+<!-- Links / ハブの中核 -->
+<section class="links" id="links">
+  <div class="section-head">
+    <p class="label">Links</p>
+    <h2>もっと知るための入口</h2>
+    <p class="section-lead">目的に合わせて、最適な場所へご案内します。</p>
+  </div>
+  <ul class="links-grid">
+    <li>
+      <a href="https://fn-zunow.com/" target="_blank" rel="noopener" class="link-card">
+        <div class="link-img"><img src="images/link-zunow.jpg" alt="zunŌw公式サイト" loading="lazy"></div>
+        <div class="link-body">
+          <p class="link-label">教育サービスを詳しく</p>
+          <h3>zunŌw 公式サイト</h3>
+          <p>STEAM教育・習い事・学童保育の詳細とお申し込みはこちら。</p>
+          <span class="link-arrow">サイトを見る →</span>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/zunow_ootakanomori_steam/" target="_blank" rel="noopener" class="link-card">
+        <div class="link-img"><img src="images/link-zunow-ig.jpg" alt="zunŌw流山おおたかの森校 Instagram" loading="lazy"></div>
+        <div class="link-body">
+          <p class="link-label">教室の日々を見る</p>
+          <h3>zunŌw おおたかの森校 Instagram</h3>
+          <p>STEAM授業の様子や子どもたちの活動を発信中。</p>
+          <span class="link-arrow">@zunow_ootakanomori_steam →</span>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/warmoria_jp/" target="_blank" rel="noopener" class="link-card">
+        <div class="link-img"><img src="images/link-warmoria-ig.jpg" alt="warmoria Instagram" loading="lazy"></div>
+        <div class="link-body">
+          <p class="link-label">最新情報・イベント告知</p>
+          <h3>warmoria Instagram</h3>
+          <p>親子スペース・リトミック・ワークショップの最新情報はこちら。</p>
+          <span class="link-arrow">@warmoria_jp →</span>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="https://note.com/fine_eel984" target="_blank" rel="noopener" class="link-card">
+        <div class="link-img"><img src="images/link-note.jpg" alt="代表note" loading="lazy"></div>
+        <div class="link-body">
+          <p class="link-label">想い・読みもの</p>
+          <h3>代表note</h3>
+          <p>平野智史が、教育への想いや日々の気づきを綴っています。</p>
+          <span class="link-arrow">noteを読む →</span>
+        </div>
+      </a>
+    </li>
+  </ul>
+</section>
+
+<!-- Numbers -->
+<section class="numbers">
+  <div class="section-head">
+    <p class="label">Numbers</p>
+    <h2>数字で見るwarmoria</h2>
+  </div>
+  <ul class="numbers-grid">
+    <li>
+      <p class="num">6,000<span>名</span></p>
+      <p class="num-label">延べ参加者<br>（出張授業）</p>
+    </li>
+    <li>
+      <p class="num">6<span>教室</span></p>
+      <p class="num-label">運営教室数<br>（2027年予定）</p>
+    </li>
+    <li>
+      <p class="num">17<span>ヶ所</span></p>
+      <p class="num-label">年間出張授業<br>実施先</p>
+    </li>
+    <li>
+      <p class="num">2025</p>
+      <p class="num-label">株式会社<br>warmoria設立</p>
+    </li>
+  </ul>
+</section>
+
+<!-- CEO -->
+<section class="ceo">
+  <div class="ceo-inner">
+    <div class="ceo-photo">
+      <img src="images/ceo.jpg" alt="代表取締役 平野智史" loading="lazy">
+    </div>
+    <div class="ceo-body">
+      <p class="label">Message</p>
+      <h2>正解のない時代に、<br>必要な教育を、スピード感を持って。</h2>
+      <p class="ceo-text">
+        コンビニから教育へ。様々な現場を経験する中で、AIネイティブ世代の子どもたちに「リアルな経験と人とのつながり」を届けたいという想いが強くなりました。正解のない教育だからこそ、この時代に必要な教育をスピード感を持って提供し続けたい。
       </p>
-      <div class="cta">
-        <a class="btn primary" href="https://line.me/R/ti/p/@499pomgv" target="_blank" rel="noopener noreferrer">
-          LINEで最新情報を受け取る
-        </a>
-        <a class="btn" href="./company.html">会社情報</a>
-      </div>
+      <p class="ceo-name">代表取締役社長　平野 智史</p>
+      <a href="company.html" class="btn btn-ghost btn-small">会社情報を見る →</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="container section">
-    <h2 style="margin:0 0 16px;">サービス一覧</h2>
-    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+<!-- Gallery -->
+<section class="gallery">
+  <div class="section-head">
+    <p class="label">Gallery</p>
+    <h2>活動の様子</h2>
+    <p class="section-lead">日々の様子はInstagramでも発信しています。</p>
+  </div>
+  <ul class="gallery-grid">
+    <li><img src="images/gallery-01.jpg" alt="" loading="lazy"></li>
+    <li><img src="images/gallery-02.jpg" alt="" loading="lazy"></li>
+    <li><img src="images/gallery-03.jpg" alt="" loading="lazy"></li>
+    <li><img src="images/gallery-04.jpg" alt="" loading="lazy"></li>
+    <li><img src="images/gallery-05.jpg" alt="" loading="lazy"></li>
+    <li><img src="images/gallery-06.jpg" alt="" loading="lazy"></li>
+    <li><img src="images/gallery-07.jpg" alt="" loading="lazy"></li>
+    <li><img src="images/gallery-08.jpg" alt="" loading="lazy"></li>
+    <li><img src="images/gallery-09.jpg" alt="" loading="lazy"></li>
+    <li><img src="images/gallery-10.jpg" alt="" loading="lazy"></li>
+    <li><img src="images/gallery-11.jpg" alt="" loading="lazy"></li>
+    <li><img src="images/gallery-12.jpg" alt="" loading="lazy"></li>
+  </ul>
+  <div class="gallery-cta">
+    <a href="https://www.instagram.com/warmoria_jp/" class="btn btn-primary" target="_blank" rel="noopener">Instagramでもっと見る</a>
+  </div>
+</section>
 
-      <div class="card" style="text-align:center;">
-        <p class="kicker">FREE SPACE</p>
-        <h2 style="margin:4px 0 8px;">親子スペース</h2>
-        <p style="color:var(--muted); margin-bottom:16px;">無料で使える親子の居場所。週2回開催。</p>
-        <a class="btn primary" href="./morning.html">詳しく見る</a>
-      </div>
-
-      <div class="card" style="text-align:center;">
-        <p class="kicker">RHYTHMIC</p>
-        <h2 style="margin:4px 0 8px;">リトミック</h2>
-        <p style="color:var(--muted); margin-bottom:16px;">月2回・40分・4,400円。5月体験会受付中！</p>
-        <a class="btn primary" href="./rhythmic.html">詳しく見る</a>
-      </div>
-
-      <div class="card" style="text-align:center;">
-        <p class="kicker">WORKSHOP</p>
-        <h2 style="margin:4px 0 8px;">ワークショップ</h2>
-        <p style="color:var(--muted); margin-bottom:16px;">STEAM教育ワークショップのご案内。</p>
-        <a class="btn" href="https://fn-zunow.com/workshop/" target="_blank" rel="noopener noreferrer">詳しく見る</a>
-      </div>
-
-      <div class="card" style="text-align:center;">
-        <p class="kicker">LINE</p>
-        <h2 style="margin:4px 0 8px;">最新情報</h2>
-        <p style="color:var(--muted); margin-bottom:16px;">日程・イベント情報をLINEで配信中。</p>
-        <a class="btn primary" href="https://line.me/R/ti/p/@499pomgv" target="_blank" rel="noopener noreferrer">友だち追加</a>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="container section">
-    <h2 style="margin:0 0 10px;">活動の様子</h2>
-    <div class="gallery">
-      <figure>
-        <img src="./kids-collage.jpg" alt="ワークショップの様子" loading="lazy" decoding="async">
-        <figcaption>授業風景</figcaption>
-      </figure>
-      <figure>
-        <img src="./class-1.jpg" alt="教室の様子" loading="lazy" decoding="async">
-        <figcaption>出張授業の様子</figcaption>
-      </figure>
-      <figure>
-        <img src="./puzzle.jpg" alt="教材・活動" loading="lazy" decoding="async">
-        <figcaption>教材・活動</figcaption>
-      </figure>
-      <figure>
-        <img src="./case-1.jpg" alt="制作物の例" loading="lazy" decoding="async">
-        <figcaption>大人気のチョコレート火山</figcaption>
-      </figure>
-      <figure>
-        <img src="./staff-1.jpg" alt="スタッフ" loading="lazy" decoding="async">
-        <figcaption>自分で作る車</figcaption>
-      </figure>
-      <figure>
-        <img src="./case-2.jpg" alt="活動の様子" loading="lazy" decoding="async">
-        <figcaption>年少～小学生までが楽しめる授業</figcaption>
-      </figure>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div>
-      <div class="footer-name">株式会社warmoria</div>
-      <div class="footer-meta">
-        千葉県流山市おおたかの森東4丁目1-6<br>
-        代表取締役社長　平野智史
-      </div>
-    </div>
-
-    <div class="footer-links">
-      <a href="./privacy.html">プライバシーポリシー</a>
-      <a href="https://fn-zunow.com/workshop/" target="_blank" rel="noopener noreferrer">お問い合わせ（外部）</a>
-      <a href="https://line.me/R/ti/p/@499pomgv" target="_blank" rel="noopener noreferrer">LINE</a>
-    </div>
-
-    <div class="footer-copy">© warmoria</div>
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <p class="footer-logo">warmoria</p>
+    <p class="footer-tagline">まなびを、楽しく。</p>
+    <ul class="footer-links">
+      <li><a href="https://fn-zunow.com/" target="_blank" rel="noopener">zunŌw</a></li>
+      <li><a href="https://www.instagram.com/warmoria_jp/" target="_blank" rel="noopener">Instagram (warmoria)</a></li>
+      <li><a href="https://www.instagram.com/zunow_ootakanomori_steam/" target="_blank" rel="noopener">Instagram (zunŌw)</a></li>
+      <li><a href="https://note.com/fine_eel984" target="_blank" rel="noopener">note</a></li>
+      <li><a href="company.html">会社情報</a></li>
+    </ul>
+    <p class="copyright">© warmoria Inc.</p>
   </div>
 </footer>
 
